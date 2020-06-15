@@ -1,2 +1,31 @@
-server:
-  port: 8888   # web应用服务端口
+#需要使用的配置文件
+spring:
+  profiles:
+    active: prod
+    # 开发环境配置文件：application-dev.yml
+    # 测试环境配置文件：application-test.yml
+    # 生产环境配置文件：application-prod.yml
+
+# 序列化时间字段
+jackson:
+  date-format: yyyy-MM-dd HH:mm:ss
+  time-zone: GMT+8
+
+# 获取自定义配置的两种实现方法
+family:
+  family-name: "happy family"
+  father:
+    name: zimug
+    age: 18
+  mother:
+    alias:
+      - lovely
+      - ailice
+  child:
+    name: zimug
+    age: 5
+    friends:
+      - hobby: football
+        sex:  male
+      - hobby: basketball
+        sex: female
